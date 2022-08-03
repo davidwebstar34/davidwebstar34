@@ -1,3 +1,149 @@
 .col-gap {
     column-gap: 14rem;
 }
+
+
+*, *:before, *:after {box-sizing:border-box;}
+.rocket-container {
+  width: 220px; height: 380px;
+  position: fixed;
+  left: 0; top: 0; right: 0; bottom: 0;
+  margin-left:-50px;
+  margin-top:10px;
+  transform: scale(0.4);
+}
+
+.capsule {
+  width: 111px; height: 154px;
+  overflow: hidden;
+  position: absolute; 
+  left: 46px; top: 7px;
+  z-index: 100;
+}
+.capsule .top{
+  position: absolute; left: 0; 
+  width: 0; height: 0; padding: 0;
+  border-bottom: 43px solid #f3f3f3;
+  border-left: 56px solid transparent;
+  border-right: 56px solid transparent;
+}
+.capsule .top:after {
+  content: '';
+  position: absolute; left: 25px; top: -14px;
+  width: 0; height: 0;
+  border-left: 0px solid transparent;
+  border-right: 156px solid transparent;
+  transform: skew(42deg);
+}
+.capsule .top .shadow {
+  position: absolute;
+  width: 0; height: 0;
+  border-bottom: 90px solid #e0e0e0;
+  border-left: 20px solid transparent;
+  border-right: 80px solid transparent;
+  transform: skew(25deg);
+}
+.capsule .base {
+  position: absolute; left: 0; top: 42px;
+  width: 112px; height: 99px;
+  background: linear-gradient(to right,#f3f3f3 58%,
+  #e0e0e0 58%);
+}
+.window-big {
+  width: 70px; height: 70px;
+  background-color: #743388;
+  border-radius: 50%;
+  position: absolute; top: 57px; left: 66px;
+  z-index: 110;
+}
+.window-small {
+  width: 44px; height: 44px;
+  background: url(https://t1.daumcdn.net/cfile/tistory/99AEE34E5C36AA1D0C);
+  background-size: cover;
+  border-radius: 50%;
+  position: absolute; top: 70px; left: 79px;
+  z-index: 120;
+}
+
+.wing-left {
+  position: absolute;
+  left: 16px; top: 62px;
+  height: 80px; width: 0; padding: 0;
+  border-right: 38px solid #e82134;
+  border-bottom: -19px solid transparent;
+  border-top: 21px solid transparent;
+}
+.wing-left:after {
+  content:'';
+  position: absolute; bottom: -50px;
+  width: 0; height: 0; 
+  border-top: 20px solid transparent;
+  border-bottom: 50px solid transparent;
+}
+.wing-right {
+  position: absolute;
+  height: 80px; width: 0; padding: 0;
+  top: 62px;right: 34px;
+  border-right: 38px solid #e82134;
+  border-top: 0px solid transparent;
+  border-bottom: 19px solid transparent;
+  transform: rotate(180deg);
+}
+.wing-right:after {
+  content:'';
+  position: absolute; top: -33px; left: -58px;
+  width: 101px; height: 0;
+  border-top: 23px solid transparent;
+  border-bottom: 45px solid transparent;
+}
+.tail {
+  position: absolute;
+  width: 101px; height: 0;
+  top: 143px; left: 51px;
+  border-top: 23px solid #e82134;
+  border-left: 9px solid transparent;
+  border-right: 8px solid transparent;
+  z-index:100;
+}
+
+.fire-1 {
+  position: absolute; z-index: 90;
+  left: 64px; top: 169px;
+  width: 70px; height: 70px;
+  background: linear-gradient(135deg,#ef8832 50%, #e82134 50%);
+  transform: rotate(-40deg) skew(1deg,-11deg);
+  animation: main_fire 0.1s ease-in infinite;
+}
+@keyframes main_fire {
+  0% {transform: translate(0, 5px) scale(1.1,1) rotate(-33deg) skew(0deg,-30deg);}
+  100% {transform: translate(0, 0) scale(1.1,2) rotate(-33deg) skew(0deg,-30deg);}
+}
+
+.fire-2 {
+  position: absolute; z-index: 90;
+  left: 63px; top: 230px;
+  width: 33px; height: 33px;
+  background: linear-gradient(135deg,#ef8832 50%, #e82134 50%);
+  transform: rotate(-33deg) skew(1deg,-30deg);
+  animation: fire-2 0.3s ease-in infinite;
+}
+@keyframes fire-2 {
+  0% {transform: translate(0, -10px) scale(1) rotate(-33deg) skew(0deg,-30deg); opacity: 1;}
+  100% {transform: translate(0, 50px) scale(0.7) rotate(-33deg) skew(0deg,-30deg);opacity: 0;}
+}
+.fire-3 {
+  position: absolute; z-index: 90;
+  left: 50px; top: 196px;
+  width: 22px; height: 22px;
+  background: linear-gradient(135deg,#ef8832 50%, #e82134 50%);
+  transform: rotate(-33deg) skew(1deg,-30deg);
+  animation: fire-2 0.3s 0.2s ease-in infinite;
+}
+.fire-4 {
+  position: absolute; z-index: 90;
+  left: 126px; top: 200px;
+  width: 22px; height: 22px;
+  background: linear-gradient(135deg,#ef8832 50%, #e82134 50%);
+  transform: rotate(-33deg) skew(1deg,-30deg);
+  animation: fire-2 0.3s 0.1s ease-in infinite;
+}

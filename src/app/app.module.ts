@@ -10,13 +10,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CardComponent } from './card/card.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
+import { PrivacyComponent } from './privacy/privacy.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
     AboutComponent,
-    HomeComponent
+    HomeComponent,
+    PrivacyComponent
   ],
   imports: [
     BrowserModule,
