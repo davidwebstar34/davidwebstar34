@@ -11,6 +11,7 @@ import { CardComponent } from './card/card.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { PrivacyComponent } from './privacy/privacy.component';
+import { NewsComponent } from './news/news.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PrivacyComponent } from './privacy/privacy.component';
     CardComponent,
     AboutComponent,
     HomeComponent,
-    PrivacyComponent
+    PrivacyComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,
