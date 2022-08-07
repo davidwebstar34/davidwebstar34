@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'davidwebstar';
+
+  activeTab = 'search';
+
+  search(activeTab: string){
+    this.activeTab = activeTab;
+  }
+  
+  changeActiveTab(name: string){this.activeTab = name;}
+   
 }

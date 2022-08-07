@@ -7,20 +7,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { CardComponent } from './card/card.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { NewsComponent } from './news/news.component';
+import { BuildsComponent } from './builds/builds.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CardComponent,
     AboutComponent,
     HomeComponent,
     PrivacyComponent,
-    NewsComponent
+    NewsComponent,
+    BuildsComponent
   ],
   imports: [
     BrowserModule,

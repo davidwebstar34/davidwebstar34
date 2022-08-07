@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Card } from '../card';
-import { CARDS } from '../mockcards';
+import { Card } from './card';
+import { CARDS } from './mockcards';
 
 @Component({
   selector: 'app-news',
