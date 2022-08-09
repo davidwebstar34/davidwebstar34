@@ -2,7 +2,6 @@
     width: 100px;
     position: fixed;
     border-radius: 0;
-    height: 100%;
 }
 
 .navbar-fixed-left .navbar-nav>li {
