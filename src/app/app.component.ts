@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,6 +13,11 @@ export class AppComponent {
   activeTab = 'search';
 
   search(activeTab: string){
+    // var state = false;
+    // console.log(activeTab)
+    // if(activeTab == "builds")
+    //   state = true;
+    //   location.reload()
     this.activeTab = activeTab;
   }
   

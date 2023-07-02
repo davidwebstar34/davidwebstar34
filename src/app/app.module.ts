@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { NewsComponent } from './news/news.component';
 import { BuildsComponent } from './builds/builds.component';
+import { BlogsComponent } from './blogs/blogs.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { BuildsComponent } from './builds/builds.component';
     HomeComponent,
     PrivacyComponent,
     NewsComponent,
-    BuildsComponent
+    BuildsComponent,
+    BlogsComponent
   ],
   imports: [
     BrowserModule,

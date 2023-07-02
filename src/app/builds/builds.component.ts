@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Build, BUILDS } from '../builds';
 
 @Component({
   selector: 'app-builds',
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BuildsComponent implements OnInit {
 
-  constructor() { }
+  builds: Build[] = BUILDS;
+
+  toggleArticle: boolean = true;
+
+  constructor() { 
+    // this.toggleArticle = true;
+    
+
+  }
 
   ngOnInit(): void {
+    // this.toggleArticle = true;
   }
+
+  // hide(disrupt: string) {
+  //   console.log(disrupt)
+  //   // hide cards and display article
+  //   this.toggleArticle = false;
+
+  // }
 
 }

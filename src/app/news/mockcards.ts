@@ -3,6 +3,16 @@ import { Card } from "./card";
 
 export const CARDS: Card[] = [
       {
+        linkedinViews: 0,
+        mediumViews: 0,
+        youtubeViews: 0,
+        title: "Meeting Werner on my Birthday",
+        content: "How lucky was I? I got to meet the godfather of cloud himself.",
+        imageUrl: "assets/images/wernerv.jpg",
+        postUrl: "",
+        date: "Oct 3, 2022"
+      },
+      {
         linkedinViews: 4035,
         mediumViews: 501,
         youtubeViews: 0,
