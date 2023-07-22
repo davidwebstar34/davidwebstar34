@@ -6,6 +6,7 @@ import { BuildsComponent } from './builds/builds.component';
 import { HomeComponent } from './home/home.component';
 import { NewsComponent } from './news/news.component';
 import { PrivacyComponent } from './privacy/privacy.component';
+import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,10 @@ const routes: Routes = [
   {
     path: "news",
     component: NewsComponent,
+  },
+  {
+    path: "contact",
+    component: ContactComponent,
   },
   {
     path: "builds",

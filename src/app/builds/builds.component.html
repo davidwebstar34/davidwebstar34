@@ -1,8 +1,8 @@
-<div style="background-color:#05273b;height:200px;">
+<div style="background-color:#6f2da8;height:200px;">
     <div class="container">
         <div class="row justify-content-md-center" style="margin-bottom: 30px;">
             <div class="col-md-auto text-center" style="margin-top:80px;color:white;font-size:40px;">
-                My Builds
+                Disruptions
             </div>
         </div>
     </div>
@@ -54,25 +54,93 @@
 <!-- (click)='hide(build.title)' -->
 <!-- href="javascript:;" -->
 
-<a routerLink="/blogs/{{build.title}}" *ngFor="let build of builds" class="row justify-content-center">
-<div *ngIf="toggleArticle" class="row justify-content-center">
-    <div class="col-8" style="min-width:300px;">
-        <div class="card mb-3 shadow-lg p-3 mb-5 bg-body rounded" style="background-color:rgba(0,0,0,.0);border:none;">
-            <div class="row g-0">
-                <div class="col-md-2" style="color:white;">
-                    <img src="{{build.imageUrl}}" class="img-fluid"/>
-                </div>
-                <div class="col-md-8" style="color:white;">
-                    <h5>Disruption is the key to change</h5>
-                    <br/>
-                    Disruption is the key to change, in this article I talk about how now is the best time for people to have amazing ideas and partner with the right people to execute them.
-                </div>
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-xl-6 col-lg-6 col-md-6" style="border:1px solid #ddd; padding:0px;">
+        <img src="../../assets/images/disruption.png" alt="responsive webite" class="img-fluid">
+      </div>
+      <div class="col-xl-6 col-lg-6 col-md-6" style="border:1px solid #ddd; padding:50px;">
+        <h2>Bootstrap Responsive Website</h2>
+        <p>Bootstrap is a famous front-end framework used to create mobile-first responsive websites. The latest release
+          version of bootstrap has removed JQuery dependency not fully work on vanilla javascript.</p>
+        <p>Using bootstrap it becomes very easy to build a responsive website.</p>
+      </div>
+    </div>
+  </div>
+
+<!-- <div class="container">
+    <a routerLink="/blogs/actual-title" class="row justify-content-center">
+      <div *ngIf="toggleArticle" class="row justify-content-center">
+        <div class="col-12">
+          <div class="row g-0">
+            <div class="col-md-6 text-center" style="color:white;padding:0px;margin:0px;">
+              <img src="../../assets/images/disruption.png" class="img-fluid" />
             </div>
-            
+            <div class="col-md-6 text-center" style="color:white;padding:0px;margin:0px;">
+              <br /><br /><br /><br />
+              <h1>Disruption is the key to change</h1>
+              <br />
+              Disruption is the key to change, in this article I talk about how now is the best time for
+              people to have amazing ideas and partner with the right people to execute them.
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div> -->
+
+<!-- <a routerLink="/blogs/:title" class="row justify-content-center">
+    <div *ngIf="toggleArticle" class="row justify-content-center">
+        <div class="col-12">
+            <div>
+                <div class="row g-0">
+                    <div class="col-md-3 text-center" style="color:white;padding:0px;margin:0px;">
+                        <br /><br /><br /><br />
+                        <h1>Disruption is the key to change</h1>
+                        <br />
+                        Disruption is the key to change, in this article I talk about how now is the best time for
+                        people to have amazing ideas and partner with the right people to execute them.
+                    </div>
+                    <div class="col-md-3 text-center" style="color:white;padding:0px;margin:0px;">
+                        <br /><br /><br /><br />
+                        <h1>Disruption is the key to change</h1>
+                        <br />
+                        Disruption is the key to change, in this article I talk about how now is the best time for
+                        people to have amazing ideas and partner with the right people to execute them.
+                    </div>
+                    <div class="col-md-6 text-center" style="color:white;padding:0px;margin:0px;">
+                        <img src="../../assets/images/disruption.png" class="img-fluid" />
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
-</div>
-</a>
+</a> -->
+
+<!-- <a routerLink="/blogs/:title" class="row justify-content-center">
+    <div *ngIf="toggleArticle" class="row justify-content-center">
+        <div class="col-12">
+            <div>
+                <div class="row g-0">
+                    <div class="col-md-6 text-center" style="color:white;padding:0px;margin:0px;">
+                        <img src="../../assets/images/disruption.png" class="img-fluid" />
+                    </div>
+                    <div class="col-md-6 text-center" style="color:white;padding:0px;margin:0px;">
+                        <br /><br /><br /><br />
+                        <h1>Disruption is the key to change</h1>
+                        <br />
+                        Disruption is the key to change, in this article I talk about how now is the best time for
+                        people to have amazing ideas and partner with the right people to execute them.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</a> -->
+
+
 
 <!-- <div class="row justify-content-center">
     <div class="col-8" style="min-width:300px;">
