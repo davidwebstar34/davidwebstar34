@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'davidwebstar';
 
-  activeTab = 'search';
+  // activeTab = 'search';
 
   search(activeTab: string){
     // var state = false;
@@ -18,9 +18,9 @@ export class AppComponent {
     // if(activeTab == "builds")
     //   state = true;
     //   location.reload()
-    this.activeTab = activeTab;
+    // this.activeTab = activeTab;
   }
   
-  changeActiveTab(name: string){this.activeTab = name;}
+  // changeActiveTab(name: string){this.activeTab = name;}
    
 }

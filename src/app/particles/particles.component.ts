@@ -96,4 +96,8 @@ export class ParticlesComponent implements OnInit, AfterViewInit {
 
     this.renderer.render(this.scene, this.camera);
   }
+
+  ngOnDestroy() {
+    this.renderer.dispose();
+  }
 }

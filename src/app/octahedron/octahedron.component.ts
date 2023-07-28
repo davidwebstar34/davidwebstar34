@@ -59,4 +59,8 @@ export class OctahedronComponent implements OnInit {
     this.renderer.render(this.scene, this.camera);
   }
 
+  ngOnDestroy() {
+    this.renderer.dispose();
+  }
+
 }

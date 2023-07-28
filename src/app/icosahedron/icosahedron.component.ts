@@ -57,4 +57,8 @@ export class IcosahedronComponent implements OnInit {
     this.mesh.rotation.y += 0.01;
     this.renderer.render(this.scene, this.camera);
   }
+
+  ngOnDestroy() {
+    this.renderer.dispose();
+  }
 }
