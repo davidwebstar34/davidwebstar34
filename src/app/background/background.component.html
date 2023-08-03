@@ -2,7 +2,8 @@
     <div class="container-fluid" style="position: absolute; z-index: 2;">
         <div class="row justify-content-md-center col-gap">
             <div class="col-sm-4 text-center" style="min-width:400px;top: 200px;">
-                <span style="font-size:40px;color: white;">{{ text }}</span>
+                <!-- <span style="font-size:40px;color: white;">{{ text }}</span> -->
+                <span style="color:white;font-size:40px;" [innerHTML]="getSafeHtml(text)"></span>
                 <!-- <button type="button" routerLink="/contact" class="btn btn-success" style="font-size:20px;">Get in touch</button> -->
                 <!-- <strong><span style="font-size:40px;">Feel a <span style="color: orange">Wave</span> of disruption in your 
                         <span style="color: #689cff">Organization</span></span></strong> -->

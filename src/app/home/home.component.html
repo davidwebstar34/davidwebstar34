@@ -6,18 +6,9 @@
       <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
     </ol>
     <div class="carousel-inner">
-      <div class="carousel-item active">
-        <app-background [text]="'Have you ever used a service and had an idea on how it could be better?'"></app-background>
-      </div>
-      <div class="carousel-item">
-        <app-background [text]="'That idea is very important and a element for disrupting customer experience for both enterprise and startups'"></app-background>
-      </div>
-      <div class="carousel-item">
-        <app-background [text]="'You will need someone you trust to help you achieve your purpose and socio-technical goals'"></app-background>
-      </div>
-      <div class="carousel-item">
-        <app-background [text]="'Please reach out and let me help you'"></app-background>
-      </div>
+        <div class="carousel-item" *ngFor="let text of texts; let i = index" [ngClass]="{'active': i === 0}">
+            <app-background [text]="text"></app-background>
+        </div>
     </div>
     <!-- <br/><br/><br/><br/> -->
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev" style="margin-top: 200px;">
@@ -32,45 +23,3 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-
- 
-
-<div style="background-color:#6f2da8;">
-    <div class="container" style="padding-left:0px!important">
-        <br />
-        <div class="row justify-content-md-center">
-            <div class="col-md-auto text-center">
-                <strong><span style="font-size:40px;color: white;">Shaping the tech frontier:</span></strong>
-            </div>
-        </div>
-        <div class="row justify-content-md-center col-gap">
-            <div class="col-sm-3 text-center" style="margin-top:40px;padding-top:20px;">
-                <app-dodecahedron></app-dodecahedron>
-                <h2 style="color:white;">Disruption</h2>
-                <p style="color:white;">Whether it's a bleeding-edge idea or a socio-technical change in an organization, let me help you execute on these projects and the risks associated with them for a competitive advantage.</p>
-                <!-- <button type="button" class="btn btn-success" style="font-size:20px;">Learn more</button> -->
-            </div>
-            <div class="col-sm-3 text-center" style="margin-top:40px;padding-top:20px;">
-                <app-icosahedron></app-icosahedron>
-                <h2 style="color:white;">Tech-first</h2>
-                <p style="color:white;">The cloud has democratized tech, allowing your great ideas to be built quickly when you let technology take the lead and put your customers first.</p>
-                <!-- <button type="button" class="btn btn-success" style="font-size:20px;">Learn more</button> -->
-            </div>
-            <div class="col-sm-3 text-center" style="margin-top:40px;padding-top:20px;">
-                <app-octahedron></app-octahedron>
-                <h2 style="color:white;">Collaboration</h2>
-                <p style="color:white;">Fostering collaboration at every level through training and building 10x engineers and teams. Working with external organizations AWS, WBSO and many other 3rd-parties to ensure the success of your product.</p>
-                <!-- <button type="button" class="btn btn-success" style="font-size:20px;">Learn more</button> -->
-            </div>
-        </div>
-        <div class="row justify-content-md-center col-gap">
-            <div class="col-sm-3 text-center" style="margin-top:40px;padding-top:20px;">
-            </div>
-            <div class="col-sm-3 text-center" style="margin-top:40px;padding-top:20px;">
-                <button type="button" class="btn btn-success" style="font-size:20px;">Learn more</button>
-            </div>
-            <div class="col-sm-3 text-center" style="margin-top:40px;padding-top:20px;">
-            </div>
-        </div>
-    </div>
-</div>

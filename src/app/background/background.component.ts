@@ -1,5 +1,6 @@
 import { Component, OnInit, ElementRef, ViewChild, AfterViewInit, HostListener, NgModule, Input } from '@angular/core';
 import * as THREE from 'three';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-background',
@@ -9,7 +10,7 @@ import * as THREE from 'three';
 export class BackgroundComponent implements OnInit, AfterViewInit {
 
   @ViewChild('rendererContainer') rendererContainer!: ElementRef;
-  @Input() text: string;
+  @Input() text!: string;
 
 
   renderer = new THREE.WebGLRenderer();
@@ -19,8 +20,7 @@ export class BackgroundComponent implements OnInit, AfterViewInit {
   frame = 0;
   // randomValues: Float32Array;
 
-  constructor() {
-    this.text = ""
+  constructor(private sanitizer: DomSanitizer) {
 
     this.camera.position.z = 5;
 
@@ -73,6 +73,10 @@ export class BackgroundComponent implements OnInit, AfterViewInit {
     this.scene.add(backlight)
 
     this.planeMesh.geometry.setAttribute('color', new THREE.BufferAttribute(new Float32Array(colors), 3))
+  }
+
+  getSafeHtml(html: string): SafeHtml {
+    return this.sanitizer.bypassSecurityTrustHtml(html);
   }
 
   ngOnInit() {

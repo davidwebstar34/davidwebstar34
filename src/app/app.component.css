@@ -24,6 +24,10 @@
     column-gap: 8rem;
 }
 
+.nav-link:hover {
+    color: lime !important;
+}
 
-
-
+.navbar-brand:hover {
+    color: lime !important;
+}
