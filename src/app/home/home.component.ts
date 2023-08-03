@@ -5,11 +5,19 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
+  activeSlideIndex = 0;
+  totalSlides = 4;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  prevSlide() {
+    if (this.activeSlideIndex > 0) {
+      this.activeSlideIndex--;
+    }
   }
 
+  nextSlide() {
+    if (this.activeSlideIndex < this.totalSlides - 1) {
+      this.activeSlideIndex++;
+    }
+  }
 }

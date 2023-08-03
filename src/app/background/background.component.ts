@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, ViewChild, AfterViewInit, HostListener, NgModule } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild, AfterViewInit, HostListener, NgModule, Input } from '@angular/core';
 import * as THREE from 'three';
 
 @Component({
@@ -9,6 +9,8 @@ import * as THREE from 'three';
 export class BackgroundComponent implements OnInit, AfterViewInit {
 
   @ViewChild('rendererContainer') rendererContainer!: ElementRef;
+  @Input() text: string;
+
 
   renderer = new THREE.WebGLRenderer();
   scene = new THREE.Scene();
@@ -18,7 +20,7 @@ export class BackgroundComponent implements OnInit, AfterViewInit {
   // randomValues: Float32Array;
 
   constructor() {
-    
+    this.text = ""
 
     this.camera.position.z = 5;
 
