@@ -16,7 +16,6 @@ import { BackgroundComponent } from './background/background.component';
 import { ContactComponent } from './contact/contact.component';
 import { ParticlesComponent } from './particles/particles.component';
 import { LogoComponent } from './logo/logo.component';
-import { IdeasComponent } from './ideas/ideas.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +29,6 @@ import { IdeasComponent } from './ideas/ideas.component';
     ContactComponent,
     ParticlesComponent,
     LogoComponent,
-    IdeasComponent,
   ],
   imports: [
     BrowserModule,

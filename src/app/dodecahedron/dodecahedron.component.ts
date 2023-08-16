@@ -14,6 +14,7 @@ export class DodecahedronComponent implements OnInit, AfterViewInit {
   scene;
   camera;
   mesh;
+  active: boolean = true;
 
   constructor() {
     this.scene = new THREE.Scene();
@@ -23,7 +24,7 @@ export class DodecahedronComponent implements OnInit, AfterViewInit {
     this.camera.position.z = 5;
 
     const geometry = new THREE.DodecahedronGeometry(1);
-    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00, wireframe: true, wireframeLinewidth: 3 });
+    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00, wireframe: true });
     this.mesh = new THREE.Mesh(geometry, material);
 
     this.scene.add(this.mesh);
@@ -41,7 +42,6 @@ export class DodecahedronComponent implements OnInit, AfterViewInit {
     this.updateRendererSize();
   }
 
-
   updateRendererSize() {
     const width = this.rendererContainer.nativeElement.clientWidth;
     const height = this.rendererContainer.nativeElement.clientHeight;
@@ -52,6 +52,8 @@ export class DodecahedronComponent implements OnInit, AfterViewInit {
   }
 
   animate() {
+    if (!this.active) return;
+
     window.requestAnimationFrame(() => this.animate());
     this.mesh.rotation.x += 0.005;
     this.mesh.rotation.y += 0.01;
@@ -59,6 +61,10 @@ export class DodecahedronComponent implements OnInit, AfterViewInit {
   }
 
   ngOnDestroy() {
-    this.renderer.dispose();
+    this.active = false;
+    this.renderer.dispose();  // Disposes the WebGL context
+
+    this.mesh.material.dispose();  // Disposes the material
+    this.mesh.geometry.dispose();  // Disposes the geometry
   }
 }

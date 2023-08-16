@@ -15,6 +15,7 @@ export class OctahedronComponent implements OnInit {
   scene;
   camera;
   mesh;
+  active: boolean = true;
 
   constructor() {
     this.scene = new THREE.Scene();
@@ -42,7 +43,6 @@ export class OctahedronComponent implements OnInit {
     this.updateRendererSize();
   }
 
-
   updateRendererSize() {
     const width = this.rendererContainer.nativeElement.clientWidth;
     const height = this.rendererContainer.nativeElement.clientHeight;
@@ -53,10 +53,19 @@ export class OctahedronComponent implements OnInit {
   }
 
   animate() {
+    if (!this.active) return;
+
     window.requestAnimationFrame(() => this.animate());
     this.mesh.rotation.x += 0.005;
     this.mesh.rotation.y += 0.01;
     this.renderer.render(this.scene, this.camera);
   }
 
+  ngOnDestroy() {
+    this.active = false;
+    this.renderer.dispose();  // Disposes the WebGL context
+
+    this.mesh.material.dispose();  // Disposes the material
+    this.mesh.geometry.dispose();  // Disposes the geometry
+  }
 }

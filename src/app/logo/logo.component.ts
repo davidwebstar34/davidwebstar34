@@ -15,12 +15,13 @@ export class LogoComponent implements OnInit, AfterViewInit {
   camera;
   width = window.innerWidth;
   height = window.innerHeight;
+  active: boolean = true;
 
   constructor() {
     this.scene = new THREE.Scene();
     this.scene.background = new THREE.Color(0x6f2da8);
 
-    this.camera = new THREE.PerspectiveCamera(80, this.width / this.height, 1, 400);
+    this.camera = new THREE.PerspectiveCamera(40, this.width / this.height, 1, 400);
     this.camera.position.z = 2000;
 
     this.makeParticles();
@@ -28,12 +29,12 @@ export class LogoComponent implements OnInit, AfterViewInit {
   }
 
   makeParticles = () => {
-    var particleCount = 5000;
+    var particleCount = 2000;
 
     // define what the particles look like
     var material = new THREE.PointsMaterial({
       color: 0x00ff00,
-      size: 20
+      size: 80
     });
 
     // x y z coordinates
@@ -85,19 +86,23 @@ export class LogoComponent implements OnInit, AfterViewInit {
   }
 
   animate() {
+    if (!this.active) return;
+  
     window.requestAnimationFrame(() => this.animate());
-
+  
     var object = this.scene.children[0];
-
+  
     //set rotation
     object.rotation.x -= Math.random() * 0.001 - 0.005;
     object.rotation.y -= Math.random() * 0.001 - 0.005;
     object.rotation.z -= Math.random() * 0.001 - 0.005;
-
+  
     this.renderer.render(this.scene, this.camera);
   }
 
   ngOnDestroy() {
+    this.active = false;
+  
     this.renderer.dispose();  // Disposes the WebGL context
     // Disposes all materials in the scene
     this.scene.traverse((node) => {
@@ -110,5 +115,5 @@ export class LogoComponent implements OnInit, AfterViewInit {
         node.material.map.dispose();
       }
     });
-}
+  }
 }

@@ -18,7 +18,7 @@ export class BackgroundComponent implements OnInit, AfterViewInit {
   camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.1, 1000);
   planeMesh: any;
   frame = 0;
-  // randomValues: Float32Array;
+  active: boolean = true;
 
   constructor(private sanitizer: DomSanitizer) {
 
@@ -83,7 +83,7 @@ export class BackgroundComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.renderer.setSize(window.innerWidth, window.innerHeight);
+    this.renderer.setSize(window.innerWidth, window.innerHeight * 0.85);
     this.rendererContainer.nativeElement.appendChild(this.renderer.domElement);
     this.animate();
   }
@@ -94,27 +94,47 @@ export class BackgroundComponent implements OnInit, AfterViewInit {
   }
 
   animate() {
+    if (!this.active) return;
     window.requestAnimationFrame(() => this.animate());
     this.renderer.render(this.scene, this.camera);
-
+  
     this.frame += 0.01
-
+  
     const positionAttribute = this.planeMesh.geometry.getAttribute('position') as THREE.BufferAttribute;
     const positionArray = new Float32Array(positionAttribute.array);
     const originalArray = new Float32Array(positionAttribute.array);
     const randomValues = new Float32Array(positionAttribute.array);
-
+  
+    let centerX = 0;
+    let centerY = 0;
+  
     for (let i = 0; i < positionArray.length; i += 3) {
       positionArray[i] = originalArray[i] + Math.cos(this.frame + (randomValues[i] - 0.5)) * 0.003
       positionArray[i + 1] = originalArray[i + 1] + Math.sin(this.frame + (randomValues[i + 1] - 0.5)) * 0.003
+      
+      centerX += positionArray[i];
+      centerY += positionArray[i + 1];
     }
-
+  
+    centerX /= positionArray.length / 3;
+    centerY /= positionArray.length / 3;
+  
+    for (let i = 0; i < positionArray.length; i += 3) {
+      positionArray[i] -= centerX;
+      positionArray[i + 1] -= centerY;
+    }
+  
     positionAttribute.array = positionArray;
     positionAttribute.needsUpdate = true;
   }
 
   ngOnDestroy() {
+    this.active = false;
     this.renderer.dispose();
+
+    // Dispose of materials and geometry
+    this.planeMesh.material.dispose();
+    this.planeMesh.geometry.dispose();
   }
 
 }
