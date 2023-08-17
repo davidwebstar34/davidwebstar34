@@ -28,7 +28,7 @@ export class ParticlesComponent implements AfterViewInit {
     this.scene = new THREE.Scene();
     this.scene.background = new THREE.Color(0x6f2da8);
 
-    this.camera = new THREE.PerspectiveCamera(70, 1, 0.1, 2000);
+    this.camera = new THREE.PerspectiveCamera(55, 1, 0.1, 2000);
 
     // this.camera.position.set(0, 90, 10);  // Move the camera back and align it with the object's position
     // this.camera.lookAt(0, 90, 0);  // Make the camera look at the object
@@ -51,22 +51,22 @@ export class ParticlesComponent implements AfterViewInit {
   }
 
   resetObject() {
-  // Traverse the scene and find the object by name
-  this.scene.traverse((object: any) => {
-    if (object.name === 'myObject') {
-      console.log('Object found:', object);
+    // Traverse the scene and find the object by name
+    this.scene.traverse((object: any) => {
+      if (object.name === 'myObject') {
+        console.log('Object found:', object);
 
-      // Reset the object's position, rotation, and scale to the initial values
-      object.position.set(-30, 90, 0);
-      object.rotation.set(0, 0, 0);
-      object.rotation.z = THREE.MathUtils.degToRad(90);
-      object.rotation.y = THREE.MathUtils.degToRad(-10);
-      object.scale.set(5, 5, 5);
+        // Reset the object's position, rotation, and scale to the initial values
+        object.position.set(-30, 90, 0);
+        object.rotation.set(0, 0, 0);
+        object.rotation.z = THREE.MathUtils.degToRad(90);
+        object.rotation.y = THREE.MathUtils.degToRad(-10);
+        object.scale.set(10, 10, 10);
 
-      console.log('Object reset:', object);
-    }
-  });
-}
+        console.log('Object reset:', object);
+      }
+    });
+  }
 
 
   loadOBJModel = () => {
@@ -76,9 +76,9 @@ export class ParticlesComponent implements AfterViewInit {
       (object: any) => {
 
         // object.rotation.set(0, 0, 0);
-        object.position.set(20, 40, -20);
+        object.position.set(80, 20, -20);
         object.name = 'myObject';
-        object.scale.set(5, 5, 5); // Adjust as necessary
+        object.scale.set(10, 10, 10); // Adjust as necessary
 
         object.rotation.z = THREE.MathUtils.degToRad(90)
         object.rotation.y = THREE.MathUtils.degToRad(-10)
@@ -134,10 +134,10 @@ export class ParticlesComponent implements AfterViewInit {
             child.material = material;
 
             // Store the original vertex positions
-        const positionAttribute = child.geometry.getAttribute('position');
-        const positionArray = positionAttribute.array as Float32Array;
-        child.userData['originalPositions'] = new Float32Array(positionArray.length);
-        child.userData['originalPositions'].set(positionArray);
+            const positionAttribute = child.geometry.getAttribute('position');
+            const positionArray = positionAttribute.array as Float32Array;
+            child.userData['originalPositions'] = new Float32Array(positionArray.length);
+            child.userData['originalPositions'].set(positionArray);
           }
         });
 
@@ -156,7 +156,7 @@ export class ParticlesComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.renderer.setSize(this.width, this.height);
+    this.renderer.setSize(this.width, this.height * 0.85);
     this.rendererContainer.nativeElement.appendChild(this.renderer.domElement);
 
     window.addEventListener('resize', () => {
@@ -175,51 +175,47 @@ export class ParticlesComponent implements AfterViewInit {
     this.controls.rotateSpeed = 0.5; // Adjust if the controls rotate too fast
 
     // Disable panning and zooming
-  this.controls.enablePan = false;
-  this.controls.enableZoom = false;
+    this.controls.enablePan = false;
+    this.controls.enableZoom = false;
 
-  // Restrict rotation to only the Y-axis (left and right)
-  this.controls.minPolarAngle = Math.PI / 2;
-  this.controls.maxPolarAngle = Math.PI / 2;
-  this.controls.minAzimuthAngle = -Infinity; // Rotate left
-  this.controls.maxAzimuthAngle = Infinity; // Rotate right
+    // Restrict rotation to only the Y-axis (left and right)
+    this.controls.minPolarAngle = Math.PI / 2;
+    this.controls.maxPolarAngle = Math.PI / 2;
 
     this.animate();
   }
 
   animate() {
     if (!this.active) return;
-  
+
     window.requestAnimationFrame(() => this.animate());
     this.renderer.render(this.scene, this.camera);
-  
+
     this.frame += 0.05; // Adjust the increment for faster or slower motion
-  
+
     // Update the vertex positions of the loaded object's meshes
     this.scene.traverse((object: any) => {
       if (object instanceof THREE.Mesh) {
         const positionAttribute = object.geometry.getAttribute('position');
         const positionArray = positionAttribute.array as Float32Array;
         const originalArray = object.userData['originalPositions'] as Float32Array; // Use the stored original positions
-  
+
         for (let i = 0; i < positionArray.length; i += 3) {
           const x = originalArray[i];
           const y = originalArray[i + 1];
           const z = originalArray[i + 2];
-  
-          const position_multiplier = 0.3;
-  
+
+          const position_multiplier = 0.2;
+
           positionArray[i] = x + Math.cos(this.frame + x) * position_multiplier;
           positionArray[i + 1] = y + Math.sin(this.frame + y) * position_multiplier;
           positionArray[i + 2] = z + Math.cos(this.frame + z) * position_multiplier;
         }
-  
+
         positionAttribute.needsUpdate = true;
       }
     });
   }
-  
-
 
   ngOnDestroy() {
     this.active = false;
@@ -235,5 +231,4 @@ export class ParticlesComponent implements AfterViewInit {
 
     this.controls.dispose();
   }
-
 }
