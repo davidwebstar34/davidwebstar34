@@ -16,6 +16,9 @@ import { BackgroundComponent } from './background/background.component';
 import { ContactComponent } from './contact/contact.component';
 import { ParticlesComponent } from './particles/particles.component';
 import { LogoComponent } from './logo/logo.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -31,10 +34,12 @@ import { LogoComponent } from './logo/logo.component';
     LogoComponent,
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     AmplifyAuthenticatorModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

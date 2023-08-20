@@ -2,6 +2,7 @@ import { Component, OnInit, ElementRef, ViewChild, AfterViewInit, HostListener }
 import * as THREE from 'three';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 
 // Make sure to correctly import OBJLoader based on your setup
@@ -23,8 +24,16 @@ export class ParticlesComponent implements AfterViewInit {
   controls: any;
   frame = 0;
   active: boolean = true;
+  question = ""
+  isDisabled: boolean = false;
 
-  constructor() {
+
+  public myMessage = 'Hello, this is Dave 2.0 - webstarcloud@gmail.com';
+  public displayedMessage = '';
+  private speed = 100;
+  private intervalId: any;
+
+  constructor(private http: HttpClient) {
     this.scene = new THREE.Scene();
     this.scene.background = new THREE.Color(0x6f2da8);
 
@@ -48,6 +57,52 @@ export class ParticlesComponent implements AfterViewInit {
     this.scene.add(pointLight);
 
     this.loadOBJModel();
+
+    this.startTyping(this.myMessage);
+
+  }
+
+  getData(prompt: string) {
+
+    let api_key = "YubCyyGw6R17z659SP1R96V2U3FcZcXM23EfRd1E"
+
+    const body = {
+      "prompt": prompt
+    }; 
+
+    const headers = new HttpHeaders({
+      "Content-Type": "application/json",
+      "x-api-key": api_key
+      // "Authorization": access_token,
+      // "Access-Control-Allow-Origin": "*", 
+      // "Access-Control-Allow-Credentials": "true"
+    });
+
+    this.http.post('https://clzngwfhz1.execute-api.eu-west-1.amazonaws.com/test', body, {headers}).subscribe(response => {
+      this.startTyping(response.toString())
+    }, error => {
+      console.error(error);
+      this.startTyping("My brain hurts to much today")
+    });
+  }
+
+  startTyping(my_msg:string) {
+    let i = 0;
+    this.intervalId = setInterval(() => {
+      if (i < my_msg.length) {
+        this.displayedMessage += my_msg[i];
+        i++;
+      } else {
+        clearInterval(this.intervalId);
+        this.isDisabled = false;
+      }
+    }, this.speed);
+  }
+
+  askQuestion() {
+    this.isDisabled = true;
+    this.displayedMessage = ""
+    this.getData(this.question);
   }
 
   resetObject() {
