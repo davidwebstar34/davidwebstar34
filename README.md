@@ -1,24 +1,50 @@
-# WebstarCloud
+![output](https://github.com/davidwebstar34/profile/assets/11534611/20a61e05-4110-4eec-9e3c-5395043a5c00)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.2.
+## Hey there 👋, I'm [David](https://github.com/davidwebstar34/)
 
-## Development server
+[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-0e76a8?style=flat-square&logo=Linkedin&logoColor=white)](https://linkedin.com/in/webstar)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Some personal information:
 
-## Code scaffolding
+- 🛠 &nbsp; I’m currently working with AWS, Python, Terraform, k8s.
+- 🚀 &nbsp; I’m certified in: 13x AWS, 2x Nvidia, 2x Coursera, 1x Oracle, 1x Tensorflow.
+- 🚀 &nbsp; I’m currently exploring ML, Gen AI, LLMs, Quantum, Accelerated computing, Privacy enhancing technology.
+- 💬 &nbsp; Ask me anything [here](https://github.com/davidwebstar34/davidwebstar34/issues/2)! I am happy to help.
+- 📫 &nbsp; Reach me out: dwebster182@gmail.com.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### I enjoy soft skills:
 
-## Build
+- 💻 &nbsp; I love exploring new technologies and building cool stuff.
+- 📰 &nbsp; Reading, writing & watching tech stuff whenever possible.
+- 🍕 &nbsp; Meetups & Tech Events & Hackathons.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Languages and Tools:
+-  JS, TS, Python, Java, C++, C, Rust and Golang.
+-  Terraform, Angular, Spring, Qt, Weld, Qiskit, Llamacpp, Langchain, TensorFlow, CUDA, pytorch, numba, JAX.
+-  AWS, GitLab, Github, Linux, Docker, Neo4J, Datadog, Okta, Terraform, k8s, Vault, OpsGenie, CUDA, OSGI, JVM flight recorder, Apache*, nsys, SLURM, nsight.
 
-## Running unit tests
+### Projects and Dev Stuffs:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+<details>
+  <summary><b>⚡ Github Stats</b></summary>
 
-## Running end-to-end tests
+  <br />
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=davidwebstar34&show_icons=true&hide_border=true&&count_private=true&include_all_commits=true" />
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=davidwebstar34&exclude_repo=KNN-Image-Classification&show_icons=true&hide_border=true&layout=compact&langs_count=8"/>
+</details>
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+<details>
+  <summary><b>☄️ Github Streaks</b></summary>
+
+  <br />
+  <img height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=davidwebstar34&hide_border=true" />
+</details>
+
+#
+
+<div align="center">
+
+### Show some ❤️ by starring some of the repositories!
+
+</div>
 
