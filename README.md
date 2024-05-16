@@ -1,4 +1,5 @@
-![output](https://github.com/davidwebstar34/profile/assets/11534611/20a61e05-4110-4eec-9e3c-5395043a5c00)
+
+![Uploading output.gif…]()
 
 ## Hey there 👋, I'm [David](https://github.com/davidwebstar34/)
 
