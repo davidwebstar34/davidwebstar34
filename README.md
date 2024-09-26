@@ -10,7 +10,7 @@
 - 🛠 &nbsp; I’m currently working with AWS, Python, Terraform, k8s.
 - 🚀 &nbsp; I’m certified in: 13x AWS, 2x Nvidia, 2x Coursera, 1x Oracle, 1x Tensorflow.
 - 🚀 &nbsp; I’m currently exploring ML, Gen AI, LLMs, Quantum, Accelerated computing, Privacy enhancing technology.
-- 💬 &nbsp; Ask me anything [here](https://github.com/davidwebstar34/davidwebstar34/issues/2)! I am happy to help.
+- 💬 &nbsp; Ask me anything [here](https://github.com/davidwebstar34/davidwebstar34/issues/new)! I am happy to help.
 - 📫 &nbsp; Reach me out: dwebster182@gmail.com.
 
 ### I enjoy soft skills:
