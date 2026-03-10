@@ -1,5 +1,7 @@
 # David Webster
 
+![output](https://github.com/davidwebstar34/davidwebstar34/assets/11534611/e57af7c6-4912-4e36-b5d6-914ed53c02e9)
+
 **Lead Engineer / Architect building AI platforms, agent systems, and trust layers at scale.**
 
 I work on production AI systems, secure multi-tenant cloud platforms, Kubernetes operating models, and accelerated computing. The through-line is engineering discipline: systems that are observable, governable, and strong enough for real workloads instead of demo-only success.
@@ -47,6 +49,8 @@ _Currently building production AI platforms with stronger trust boundaries, clea
 - LinkedIn: [in/webstar](https://www.linkedin.com/in/webstar)
 - Medium: [@davidwebstar](https://medium.com/@davidwebstar)
 - X: [WebstarDavid](https://x.com/WebstarDavid)
+- Ask me anything: [Questions](https://github.com/davidwebstar34/davidwebstar34/issues/new)
+
 
 ## Collaborate
 
