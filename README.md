@@ -4,7 +4,7 @@
 
 I work on production AI systems, secure multi-tenant cloud platforms, Kubernetes operating models, and accelerated computing. The through-line is engineering discipline: systems that are observable, governable, and strong enough for real workloads instead of demo-only success.
 
-[Website](https://davidwebstar.com/) | [LinkedIn](https://www.linkedin.com/in/webstar) | [Medium](https://medium.com/@davidwebstar) | [X](dwebster182@gmail.com) | [Email](mailto:dwebster182@gmail.com)
+[Website](https://davidwebstar.com/) | [LinkedIn](https://www.linkedin.com/in/webstar) | [Medium](https://medium.com/@davidwebstar) | [X](https://x.com/WebstarDavid) | [Email](mailto:dwebster182@gmail.com)
 
 _Currently building production AI platforms with stronger trust boundaries, cleaner Kubernetes operating models, and GPU-aware infrastructure._
 
@@ -46,7 +46,7 @@ _Currently building production AI platforms with stronger trust boundaries, clea
 - Website: [davidwebstar.com](https://davidwebstar.com/)
 - LinkedIn: [in/webstar](https://www.linkedin.com/in/webstar)
 - Medium: [@davidwebstar](https://medium.com/@davidwebstar)
-- X: [WebstarDavid](dwebster182@gmail.com)
+- X: [WebstarDavid](https://x.com/WebstarDavid)
 
 ## Collaborate
 
