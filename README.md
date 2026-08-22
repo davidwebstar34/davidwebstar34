@@ -1,76 +1,60 @@
 # David Webster
 
-![output](https://github.com/davidwebstar34/davidwebstar34/assets/11534611/e57af7c6-4912-4e36-b5d6-914ed53c02e9)
+**Principal Architect @ Backbase | building systems for what AI agents can read, call & change**
 
-**Lead Engineer / Architect building AI platforms, agent systems, and trust layers at scale.**
+I build new technical systems where AI, distributed software and trust boundaries
+meet. I tend to stay with a problem from rough idea through model or prototype,
+critical-path code, platform and technical delivery.
 
-I work on production AI systems, secure multi-tenant cloud platforms, Kubernetes operating models, and accelerated computing. The through-line is engineering discipline: systems that are observable, governable, and strong enough for real workloads instead of demo-only success.
+[Website](https://davidwebstar.com/) |
+[CV](https://davidwebstar.com/assets/David-Webster-AI-Systems-Builder.pdf) |
+[The Forge](https://webstarcloud.com/) |
+[LinkedIn](https://www.linkedin.com/in/webstar) |
+[Email](mailto:dwebster182@gmail.com)
 
-[Website](https://davidwebstar.com/) | [LinkedIn](https://www.linkedin.com/in/webstar) | [Medium](https://medium.com/@davidwebstar) | [X](https://x.com/WebstarDavid) | [Email](mailto:dwebster182@gmail.com)
+## Building now
 
-_Currently building production AI platforms with stronger trust boundaries, cleaner Kubernetes operating models, and GPU-aware infrastructure._
+Small, sharp tools for the boundaries where production AI meets the real world.
 
-## Current Focus
+| Maturity | Artifact | What it does |
+| --- | --- | --- |
+| **Shipped** | [`llm-input-hardening`](https://pypi.org/project/llm-input-hardening/) | Rust-backed Python package for Unicode-aware text integrity before prompts, retrieval and tool arguments. Includes policy decisions, telemetry, fuzzing and a labelled evaluation corpus. |
+| **Working preview** | `agent-api-hardening` / Blacksmith | Turns OpenAPI contracts into least-capability SDK and MCP surfaces, with unreviewed writes and dangerous operations omitted by construction. |
+| **POC** | [Greenlight](https://webstarcloud.com/greenlight) | A decision layer for consequential AI and human actions, with policy checks, approvals, idempotency, signed webhooks and an audit trail. |
 
-- Agentic AI platforms that stay observable, reviewable, and operable under production constraints.
-- LLM trust and hardening with guardrails, approvals, deterministic fallbacks, and safer input handling.
-- Cloud and Kubernetes platform engineering that gives teams secure paved roads instead of bespoke snowflakes.
-- Secure enterprise architecture spanning identity, policy, secrets, reliability, and operational control.
-- Accelerated computing and GPU-oriented systems for high-throughput AI workloads.
-- Quantum and post-quantum exploration where long-horizon platform decisions matter.
+## Production and 0-to-1
 
-## Selected Projects
+- At Backbase, I build the shared agentic platform and the APIs behind its control
+  and data planes. One agentic use case is live in production.
+- At Paycode, I wrote and shipped Java web services and C++ biometric backends for
+  customer deployments across Guinea, Ghana, Namibia and Botswana.
+- At Synthesis, I worked directly with the Chief Disruption Officer and Head of
+  Cloud Consulting on 0-to-1 client engagements. For Absa, I built the AWS process
+  engine and trained TensorFlow models for logo and text detection. The system
+  processed 5,000 records in 30 minutes and helped audit 40,000 artefacts across
+  300 systems.
+- I solo-built and launched InvestSure's serverless claims platform in under two
+  months, and built the first BuzBrain generative-AI product in under two weeks.
+- At TMNL, I helped build the analytics and model-development platform used across
+  five Dutch banks; its redesign reduced infrastructure cost by $1.5 million.
 
-- [awscloud_sso](https://github.com/davidwebstar34/awscloud_sso) - Rust CLI for acquiring AWS SSO credentials without manual console churn.
-- [awscloud_sso_cred_helper](https://github.com/davidwebstar34/awscloud_sso_cred_helper) - Helper library for AWS SSO credential workflows and integrations.
-  <!-- - [agentic-zoo](https://github.com/davidwebstar34/agentic-zoo) - Public examples and working patterns for LLM agents and agentic AI. -->
-  <!-- - [secure-k8s-template](https://github.com/davidwebstar34/secure-k8s-template) - Secure Helm and Kubernetes scaffolding for production-minded application delivery. -->
-  <!-- - [wellarchitected-reviewer](https://github.com/davidwebstar34/wellarchitected-reviewer) - Tooling around AWS Well-Architected review workflows and architecture assessments. -->
+## Selected public engineering
 
-## Certifications
+- [`ghc-hvm-plugin`](https://github.com/davidwebstar34/ghc-hvm-plugin) lowers a
+  defined subset of GHC Core to runnable HVM2.
+- [`awscloud_sso`](https://github.com/davidwebstar34/awscloud_sso) is a Rust CLI for
+  AWS IAM Identity Center and short-lived credential workflows.
+- [`rustssm`](https://github.com/davidwebstar34/rustssm) is Rust tooling for EC2
+  access, tunnelling and remote development through AWS Systems Manager.
 
-- AWS: 13 certifications
-- Kubernetes: 5 certification
-- NVIDIA: 2 certifications
-- Oracle: 1 certification
-- TensorFlow: 1 certification
-- Additional study: 2 Coursera completions (Neural networks, Deeplearning & Generative AI with LLMs)
+## R&D
 
-## Capabilities
+Exploratory work, not production claims:
 
-- Languages: Python, Rust, TypeScript, Go, Java, C/C++, Haskell
-- Cloud & Platform: AWS, Azure, GCP, Kubernetes, Terraform, Helm, Docker, Linux, Ansible
-- AI / Systems: LLM agents, LangChain, llama.cpp, TensorFlow, PyTorch, CUDA, JAX, Numba, SLURM, Nsight
-- Security / Operations: Vault, Okta, Datadog, GitHub, GitLab, OpsGenie, Langfuse, LangWatch, Promptfoo, NeMo
+- AWS P5/H100, ParallelCluster and Slurm environments; CNN, LSTM and NLP model
+  training with TensorFlow and PyTorch.
+- DeepRacer, autoencoders, GANs, deepfakes, Jetson and quantum-game prototypes.
 
-## Writing & Links
-
-- Website: [davidwebstar.com](https://davidwebstar.com/)
-- LinkedIn: [in/webstar](https://www.linkedin.com/in/webstar)
-- Medium: [@davidwebstar](https://medium.com/@davidwebstar)
-- X: [WebstarDavid](https://x.com/WebstarDavid)
-- Ask me anything: [Questions](https://github.com/davidwebstar34/davidwebstar34/issues/new)
-
-
-## Collaborate
-
-If you are building AI platforms, agent systems, or cloud foundations that need stronger trust, security, and operational discipline, reach me at [dwebster182@gmail.com](mailto:dwebster182@gmail.com). I am especially interested in architecture, platform engineering, speaking, and advisory conversations where the technical bar is high.
-
-<!--
-Profile repo maintenance notes
-
-Manual GitHub settings
-- Description: GitHub profile README for David Webster - AI platforms, agent systems, cloud architecture, trust and security at scale.
-- Website: https://davidwebstar.com/
-- Topics: ai-platforms, agentic-ai, cloud-architecture, kubernetes, aws, security, platform-engineering, llm, rust, python, accelerated-computing
-
-Suggested pinned repositories
-- agentic-zoo: strongest public signal for current agent systems and AI platform direction.
-- secure-k8s-template: shows practical Kubernetes and security depth.
-- awscloud_sso: useful cloud identity tooling with clear operator value.
-- wellarchitected-reviewer: reinforces architecture, governance, and review discipline.
-- awscloud_sso_cred_helper or rustssm: rounds out systems and Rust depth without cluttering the narrative.
-
-Visual note
-- Keep the current banner removed unless it is replaced with a cleaner asset tied to AI platforms, trust, or cloud systems.
--->
+If you are working on agent infrastructure, applied ML or a difficult 0-to-1
+system, reach me via [LinkedIn](https://www.linkedin.com/in/webstar) or
+[email](mailto:dwebster182@gmail.com).
